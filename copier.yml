@@ -1,0 +1,34 @@
+---
+# ------------------------------------------------------------------------------
+# COPIER CONFIGURATION
+# ------------------------------------------------------------------------------
+
+_min_copier_version: "9"
+_subdirectory: template
+_answers_file: .copier-answers.common.yml
+
+_message_after_copy: |
+  Your project "{{ repo_name }}" has been created successfully!
+
+_message_after_update: |
+  Your project "{{ repo_name }}" has been updated successfully!
+  In case there are any conflicts, please resolve them.
+
+# ------------------------------------------------------------------------------
+# TEMPLATE VARIABLES
+# ------------------------------------------------------------------------------
+
+repo_name:
+  type: str
+  help: The repository name (used e.g. in the README title)
+  default: Example Repository
+
+repo_description:
+  type: str
+  help: A short description for the repository. Used in the README description and repository metadata
+  default: Repository for example purposes.
+
+repo_author_name:
+  type: str
+  help: The name of the repository author
+  default: Flaudísio Tolentino

@@ -1,5 +1,4 @@
 [tools]
-copier = "9"
 "pipx:bump-my-version" = "1"
 shellcheck = "0.11"
 
@@ -22,27 +21,3 @@ run = "bump-my-version bump patch"
 [tasks.git-push]
 description = "Push the current branch and related tags"
 run = "git push --follow-tags origin HEAD"
-
-[tasks.clean]
-description = "Cleanup generated files"
-run = """
-  #!/usr/bin/env bash
-  set -x
-  case "$1" in
-    /tmp|.|"$PWD")
-      echo "WARN: refusing to remove directory '$1'"
-      exit 0
-    ;;
-  esac
-  rm -rf -- "$1"
-"""
-
-[tasks.generate]
-description = "Generate project using the local template directory"
-usage = '''
-  arg "<output_dir>" help="Output directory" default="output/example-repo"
-'''
-run = [
-  'mise run clean -- "${usage_output_dir}"',
-  'copier copy --trust --vcs-ref HEAD . "${usage_output_dir}"',
-]
