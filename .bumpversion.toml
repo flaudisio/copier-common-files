@@ -5,11 +5,11 @@ message = "chore: bump version to {new_version}"
 tag = true
 tag_name = "v{new_version}"
 tag_message = "Version {new_version}"
+setup_hooks = [
+  "mise run update-changelog -- --commit",
+]
 
 [[tool.bumpversion.files]]
 filename = "CHANGELOG.md"
 search = "## Unreleased"
-replace = """
-## Unreleased
-
-## v{new_version} - {now:%Y-%m-%d}"""
+replace = "## v{new_version} - {now:%Y-%m-%d}"
