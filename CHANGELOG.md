@@ -2,8 +2,23 @@
 
 ## Unreleased
 
-- chore: update base files
+### Miscellaneous
+
+- Configure git-cliff to keep the changelog
+- Update base files
 
 ## v0.1.0 - 2025-11-22
 
-- feat: add template version
+### Features
+
+- Add template
+
+### Documentation
+
+- Add usage instructions
+
+### Miscellaneous
+
+- Remove unused file reference
+- Bump actions/checkout from 5 to 6
+- Initialize repository
