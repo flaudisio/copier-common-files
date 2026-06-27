@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+### Miscellaneous
+
+- Update yamllint config
+- Bump GH actions
+- Bump actions/checkout from 6 to 7
+- Update Python and install uv
+- Bump jdx/mise-action from 3 to 4
+
 ## v0.1.1 - 2026-02-12
 
 ### Miscellaneous
