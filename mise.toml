@@ -2,11 +2,12 @@
 copier = "9"
 git-cliff = "2"
 "pipx:bump-my-version" = "1"
+prek = "latest"
 shellcheck = "0.11"
 
-[tasks.pre-commit]
-description = "Run pre-commit"
-run = "pre-commit run --all-files --color always"
+[tasks.lint]
+description = "Run lint"
+run = "prek run --all-files --color always"
 
 [tasks."bump-version"]
 description = "Bump the project version"
